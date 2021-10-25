@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
 }
 
 class Profile extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +40,7 @@ class Profile extends StatelessWidget {
             children: <Widget>[
               Image.asset('assets/ironman2.png',
               width: 400, height: 500,),
+  
               Text('Stefan Garlson',
               style: TextStyle(
                 color: Colors.black,
@@ -51,12 +55,33 @@ class Profile extends StatelessWidget {
                 fontSize: 15.0
               ),
               ),
-              Divider(
-                height: 50.0,
-                color: Colors.grey,
-                thickness: 0.5,
-                endIndent: 0.0,
-                )
+
+
+              SizedBox(
+              height: 30.0,
+            ),
+
+         Table(
+           border: TableBorder.all(width:1, color:Colors.grey),
+           children: [
+
+             TableRow(
+               children: [
+                 TableCell(child: Text("a")),
+                 TableCell(child: Text("b")),
+                 
+               ]
+             ),
+
+              TableRow(
+               children: [
+                 TableCell(child: Text("c")),
+                 TableCell(child: Text("d")),
+                 
+               ]
+             ),
+           ],
+           ),
             ],
           ),
         ),
